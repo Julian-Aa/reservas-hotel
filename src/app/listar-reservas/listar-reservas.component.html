@@ -1,0 +1,30 @@
+<div class="container mt-4">
+    <h2>Listado de Reservas</h2>
+    <button (click)="agregarReserva()" class="btn btn-primary">Agregar Reserva</button>
+    <button (click)="vaciarReservas()" class="btn btn-danger">Vaciar Reservas</button>
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th>Nombre y Apellidos</th>
+          <th>Email</th>
+          <th>Tipo de Cliente</th>
+          <th>Fecha de Llegada</th>
+          <th>Fecha de Salida</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let reserva of reservas; let i = index">
+          <td>{{ reserva.nombre }} {{ reserva.apellidos }}</td>
+          <td>{{ reserva.email }}</td>
+          <td>{{ reserva.tipoCliente }}</td>
+          <td>{{ reserva.fechaLlegada }}</td>
+          <td>{{ reserva.fechaSalida }}</td>
+          <td>
+            <a [routerLink]="['/editar-reserva', i]" class="btn btn-primary">Editar</a>
+            <button (click)="eliminarReserva(i)" class="btn btn-danger">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>

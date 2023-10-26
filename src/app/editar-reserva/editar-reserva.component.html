@@ -1,0 +1,35 @@
+<div class="container">
+    <h2>Editar Reserva</h2>
+    <form (ngSubmit)="guardarReserva()" #editarReservaForm="ngForm">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="reserva.nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" class="form-control" id="apellidos" name="apellidos" [(ngModel)]="reserva.apellidos" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="reserva.email" required>
+      </div>
+      <div class="form-group">
+        <label for="tipoCliente">Tipo de Cliente:</label>
+        <select class="form-control" id="tipoCliente" name="tipoCliente" [(ngModel)]="reserva.tipoCliente" required>
+          <option value="VIP">VIP</option>
+          <option value="Socio">Socio</option>
+          <option value="No Socio">No Socio</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fechaLlegada">Fecha de Llegada:</label>
+        <input type="date" class="form-control" id="fechaLlegada" name="fechaLlegada" [(ngModel)]="reserva.fechaLlegada" required>
+      </div>
+      <div class="form-group">
+        <label for="fechaSalida">Fecha de Salida:</label>
+        <input type="date" class="form-control" id="fechaSalida" name="fechaSalida" [(ngModel)]="reserva.fechaSalida" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    </form>
+  </div>
+  
