@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import Swal from 'sweetalert2'; // Importa SweetAlert2
-import { Reserva } from '../models/reserva.model';
-import { ReservaService } from '../reserva.service';
+import { Reserva } from '../../../models/reserva.model';
+import { ReservaService } from '../../../reserva.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({

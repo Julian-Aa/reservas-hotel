@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Reserva } from '../models/reserva.model';
-import { ReservaService } from '../reserva.service';
+import { Reserva } from '../../../models/reserva.model';
+import { ReservaService } from '../../../reserva.service';
 import Swal from 'sweetalert2';
 
 @Component({

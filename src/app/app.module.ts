@@ -3,12 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListarReservasComponent } from './listar-reservas/listar-reservas.component';
-import { EditarReservaComponent } from './editar-reserva/editar-reserva.component';
+import { ReservaModule } from './reserva/reserva.module';
 
 @NgModule({
-  declarations: [AppComponent, ListarReservasComponent, EditarReservaComponent],
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, ReservaModule],
   providers: [],
   bootstrap: [AppComponent],
 })
